@@ -53,6 +53,87 @@ Nej, inte något större som är utöver reddit klonen. Det vore, i så fall, et
 
 ---
 
+# E-commerce
+
+- Köpa produkter (utifrån varukorg)
+- Lägga produkter i varukorg
+- Lägga till produkter i önskelista
+- Spara varukorg i konto
+- Spara önskelista som kan delas med andra
+- Skapa kundkonto
+- Radera kundkonto
+- Ändra kundkonto
+- Se historik av ordrar (för konto)
+- Rating på produkter
+- Recensioner på produkter
+
+customers:
+
+- id
+- förnamn
+- efternamn
+- lösenord
+- address
+- telefonnummer
+- epost
+
+products:
+
+- id
+- namn
+- beskrivning
+- pris
+- lager_antal INT
+- thumbnailImageUrl
+
+customer_ratings:
+
+- id
+- product_id
+- customer_id
+- rating DECIMAL (antal stjärnor)
+
+customer_reviews:
+
+- id
+- product_id
+- customer_id
+- beskrivning TEXT
+
+product_cart:
+
+- user_id
+- product_id
+- produkt_antal
+
+product_wishlist:
+
+- id
+- titel
+- user_id
+- datum
+
+product_wishlist_products:
+
+- product_id
+- wishlist_id
+- produkt_antal
+
+orders:
+
+- id
+- user_id
+- datum
+
+order_products:
+
+- product_id
+- order_id
+- produkt_antal
+- pris_per_produkt
+
+---
+
 # Quiz frågor
 
 - Varför är normalisering viktigt?
